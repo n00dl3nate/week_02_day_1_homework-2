@@ -14,4 +14,14 @@ class TestSportTeam < MiniTest::Test
     assert_equal("Liverpool",result)
   end
 
+  def test_get_team_players
+    result = @sport_team.get_players
+    assert_equal(["Jack","Tom","Billy","Sam","Nate"],result)
+  end
+
+  def test_get_team_coach
+    result = @sport_team.get_coach
+    assert_equal("Bill",result)
+  end
+
 end
