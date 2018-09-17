@@ -34,7 +34,12 @@ class TestSportTeam < MiniTest::Test
     @sport_team.add_players(["Craig","Adam"])
     result = @sport_team.players.length
     assert_equal(7,result)
-  end 
+  end
+
+  def test_check_players
+    result = @sport_team.check_players("Jack")
+    assert_equal(true, result)
+  end
 
 
 
